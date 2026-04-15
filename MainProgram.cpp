@@ -110,7 +110,7 @@ public:
     // If out of range, keep current GPA.
     void setGpa(double g) {
         // YOUR CODE HERE
-        if(gpa<=4 && gpa>= 0){
+        if(g<=4 && g>= 0){
             gpa = g; 
         }
         
@@ -167,9 +167,12 @@ public:
 Student findBestStudent(const Student& a, const Student& b) {
     // YOUR CODE HERE
      if (a < b) {
-        return a;
+        return b;
     }
-    return b;
+     else {
+         return a; 
+     }
+  
 }
 
 // Version 2: Takes an array of Students and its size, returns the one with highest GPA
